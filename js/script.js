@@ -1,10 +1,9 @@
-function openModal(title, videoURL, description) {
-  document.getElementById('videoModalLabel').textContent = title;
-  document.getElementById('videoFrame').src = videoURL;
-  document.getElementById('videoDesc').textContent = description;
+function goToEpisode(title, videoURL, description) {
+  const encodedTitle = encodeURIComponent(title);
+  const encodedURL = encodeURIComponent(videoURL);
+  const encodedDesc = encodeURIComponent(description);
 
-  const myModal = new bootstrap.Modal(document.getElementById('videoModal'));
-  myModal.show();
+  window.location.href = `episode-view.html?title=${encodedTitle}&video=${encodedURL}&desc=${encodedDesc}`;
 }
 
 function stopVideo() {

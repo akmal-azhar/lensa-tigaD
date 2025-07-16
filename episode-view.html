@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View | Lensa 3D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2">
+        <span>Lensa 3D</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="episodes.html">Episodes</a></li>
+          <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-5">
+    <h1 id="videoTitle" class="video-title text-center mb-4"></h1>
+
+    <div class="ratio ratio-16x9 mb-4">
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+
+    <p id="videoDesc" class="lead text-center mb-4"></p>
+
+    <!-- Social Share -->
+    <div class="text-center mb-5">
+      <h5>Share this video:</h5>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-youtube"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Related Videos -->
+    <div class="related-videos mb-5">
+      <h4 class="mb-4">Related Videos</h4>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card related-card">
+            <img src="images/first.png" class="card-img-top" alt="Related 1">
+            <div class="card-body">
+              <h5 class="card-title">Preseason Training | SFC 2025</h5>
+              <a href="episode-view.html?title=Preseason%20Training&video=https://www.youtube.com/embed/2F2eUrucXFo&desc=VLOG%20SFC%20Preseason%202025" class="btn btn-sm btn-outline-dark mt-2">Watch</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card related-card">
+            <img src="images/four.png" class="card-img-top" alt="Related 2">
+            <div class="card-body">
+              <h5 class="card-title">Chelsea vs PSG Final</h5>
+              <a href="episode-view.html?title=Chelsea%20vs%20PSG&video=https://www.youtube.com/embed/ON18ItHo5YE&desc=Club%20World%20Cup%20Final%20Highlights" class="btn btn-sm btn-outline-dark mt-2">Watch</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card related-card">
+            <img src="images/six.png" class="card-img-top" alt="Related 3">
+            <div class="card-body">
+              <h5 class="card-title">Chelsea vs Palmeiras</h5>
+              <a href="episode-view.html?title=Chelsea%20vs%20Palmeiras&video=https://www.youtube.com/embed/oiTDGbqgxfU&desc=Palmer%20Scores%20Again" class="btn btn-sm btn-outline-dark mt-2">Watch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="text-center">
+      <a href="episodes.html" class="btn btn-dark">← Kembali ke Senarai Episod</a>
+    </div>
+  </div>
+
+      <!-- Footer -->
+    <footer class="footer mt-5 bg-dark text-light py-4 text-center">
+    <div class="container">
+        <div class="mb-3">
+        <a href="index.html" class="text-light me-3">Home</a>
+        <a href="episodes.html" class="text-light me-3">Episodes</a>
+        <a href="article.html" class="text-light me-3">Article</a>
+        <a href="about.html" class="text-light me-3">About</a>
+        <a href="contact.html" class="text-light">Contact</a>
+        </div>
+        <div class="mb-3">
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-youtube"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-tiktok"></i></a>
+        </div>
+        <div>
+        <small>&copy; 2025 MyVlog. All rights reserved.</small>
+        </div>
+    </div>
+    </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Video Loader -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const title = decodeURIComponent(params.get("title"));
+    const video = decodeURIComponent(params.get("video"));
+    const desc = decodeURIComponent(params.get("desc"));
+
+    document.getElementById("videoTitle").textContent = title;
+    document.getElementById("videoFrame").src = video;
+    document.getElementById("videoDesc").textContent = desc;
+  </script>
+
+</body>
+</html>
