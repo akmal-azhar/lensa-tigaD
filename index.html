@@ -16,17 +16,17 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2">
+        <img src="images/logo.png" alt="Logo" width="100" height="60" class="me-2">
         <span>Lensa 3D</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto gap-3">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="episodes.html">Episodes</a></li>
           <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
@@ -71,82 +71,87 @@
     </div>
   </section>
 
-  <!-- Episodes Section -->
-  <div id="episodes" class="container py-5">
-    <h2 class="text-center fw-bold text-uppercase mb-4">Latest Episodes<span class="text-primary">/</span></h2>
+  <!-- Latest Videos Section -->
+  <section class="vlog-alternate-section py-5 bg-dark text-center fade-in">
+    <div class="container">
+      <h2 class="text-center fw-bold text-uppercase text-white mb-5">Latest Videos<span class="text-warning">/</span></h2>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- Vlog Card 4 -->
-      <div class="col">
-        <div class="card vlog-card" onclick="goToEpisode( 'Episode 4:',
-         'https://www.youtube.com/embed/ON18ItHo5YE', 
-         'Chelsea vs. PSG Final SHOWDOWN | FIFA Club World Cup Highlights' )">
-          <div class="vlog-thumb-wrapper">
-            <img src="images/four.png" class="vlog-thumb" alt="Vlog 4">
-            <div class="play-icon"><i class="bi bi-play-circle-fill"></i></div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Chelsea vs. PSG Final SHOWDOWN</h5>
-            <p class="card-text">FIFA Club World Cup Highlights</p>
-          </div>
+      <!-- Episode 1 -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+          <a href="episode-view.html?title=Episode%201:%20SFC%20Preseason%202025&video=https://www.youtube.com/embed/2F2eUrucXFo&desc=Dari%20Hari%20Pertama%20Sampai%20Friendly%20Pertama%20%F0%9F%87%B9%F0%9F%87%AD">
+            <div class="video-thumb position-relative">
+              <img src="images/first.png" alt="Vlog 1" class="img-fluid rounded-3">
+              <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 text-white">
+          <h4 class="fw-bold">Episode 1: SFC Preseason 2025</h4>
+          <p>Dari Hari Pertama Sampai Friendly Pertama 🇹🇭. Saksikan perjalanan pasukan dalam latihan pramusim yang penuh cabaran!</p>
         </div>
       </div>
 
-      <!-- Vlog Card 5 -->
-      <div class="col">
-        <div class="card vlog-card" onclick="goToEpisode( 'Episode 5:',
-        'https://www.youtube.com/embed/mBj1P7O2UVU',
-        'Chelsea Advance To Final With 2-0 WIN vs. Fluminense | FIFA Club World Cup Highlights' )">
-          <div class="vlog-thumb-wrapper">
-            <img src="images/five.png" class="vlog-thumb" alt="Vlog 4">
-            <div class="play-icon"><i class="bi bi-play-circle-fill"></i></div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Chelsea vs. PSG Final SHOWDOWN</h5>
-            <p class="card-text">FIFA Club World Cup Highlights</p>
-          </div>
+      <!-- Episode 2 (Reverse) -->
+      <div class="row align-items-center flex-md-row-reverse mb-5">
+        <div class="col-md-6">
+          <a href="episode-view.html?title=Episode%202:%20Chelsea%20vs%20PSG&video=https://www.youtube.com/embed/ON18ItHo5YE&desc=Final%20Club%20World%20Cup%202025.%20Saksikan%20detik%20perlawanan%20akhir%20antara%20dua%20kelab%20gergasi%20Eropah!">
+            <div class="video-thumb position-relative">
+              <img src="images/four.png" alt="Vlog 2" class="img-fluid rounded-3">
+              <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 text-white">
+          <h4 class="fw-bold">Episode 2: Chelsea vs PSG</h4>
+          <p>Final Club World Cup 2025. Saksikan detik-detik dramatik perlawanan akhir antara dua kelab gergasi Eropah!</p>
         </div>
       </div>
 
-      <!-- Vlog Card 6 -->
-      <div class="col">
-        <div class="card vlog-card" onclick="goToEpisode( 'Episode 6:',
-         'https://www.youtube.com/embed/oiTDGbqgxfU',
-         'Cole Palmer & Chelsea Send Estêvão & Palmeiras Home | FIFA Club World Cup Highlights' )">
-          <div class="vlog-thumb-wrapper">
-            <img src="images/six.png" class="vlog-thumb" alt="Vlog 4">
-            <div class="play-icon"><i class="bi bi-play-circle-fill"></i></div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Chelsea vs. PSG Final SHOWDOWN</h5>
-            <p class="card-text">FIFA Club World Cup Highlights</p>
-          </div>
+      <!-- Episode 3 -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+          <a href="episode-view.html?title=Episode%203:%20Cole%20Palmer%20&%20Chelsea&video=https://www.youtube.com/embed/oiTDGbqgxfU&desc=Cole%20Palmer%20dan%20Chelsea%20menewaskan%20Palmeiras%20dengan%20aksi%20memukau.">
+            <div class="video-thumb position-relative">
+              <img src="images/six.png" alt="Vlog 3" class="img-fluid rounded-3">
+              <div class="play-button"><i class="bi bi-play-circle-fill"></i></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 text-white">
+          <h4 class="fw-bold">Episode 3: Cole Palmer & Chelsea</h4>
+          <p>Cole Palmer dan Chelsea menewaskan Palmeiras dengan aksi memukau. Saksikan highlight perlawanan Club World Cup!</p>
         </div>
       </div>
 
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer mt-5 bg-black text-light py-4 text-center">
+  <div class="container">
+    <!-- Footer Links -->
+    <div class="mb-3">
+      <a href="index.html" class="footer-link text-light mx-2">Home</a>
+      <a href="episodes.html" class="footer-link text-light mx-2">Episodes</a>
+      <a href="article.html" class="footer-link text-light mx-2">Article</a>
+      <a href="about.html" class="footer-link text-light mx-2">About</a>
+      <a href="contact.html" class="footer-link text-light mx-2">Contact</a>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="mb-3">
+      <a href="#" class="footer-icon text-light mx-2"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="footer-icon text-light mx-2"><i class="bi bi-youtube"></i></a>
+      <a href="#" class="footer-icon text-light mx-2"><i class="bi bi-tiktok"></i></a>
+    </div>
+
+    <!-- Copyright -->
+    <div>
+      <small>&copy; 2025 Lensa 3D. All rights reserved.</small>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="footer mt-5 bg-dark text-light py-4">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="index.html" class="text-light me-3">Home</a>
-        <a href="episodes.html" class="text-light me-3">Episodes</a>
-        <a href="article.html" class="text-light me-3">Article</a>
-        <a href="about.html" class="text-light me-3">About</a>
-        <a href="contact.html" class="text-light">Contact</a>
-      </div>
-      <div class="mb-3">
-        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="text-light me-3"><i class="bi bi-youtube"></i></a>
-        <a href="#" class="text-light"><i class="bi bi-tiktok"></i></a>
-      </div>
-      <div>
-        <small>&copy; 2025 MyVlog. All rights reserved.</small>
-      </div>
-    </div>
-  </footer>
+</footer>
 
   <!-- Video Modal -->
   <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">

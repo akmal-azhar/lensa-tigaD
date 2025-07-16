@@ -1,29 +1,33 @@
 /* =======================================
    NAVBAR / HEADER
 ======================================= */
-.navbar {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.bg-black {
+  background-color: #000 !important;
+}
+.navbar .nav-link {
+  position: relative;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #ffffff !important;
-}
-.navbar-brand span {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #ffffff;
+.navbar .nav-link:hover {
+  transform: translateY(-2px); /* timbul sikit ke atas */
+  font-weight: 500;
 }
 
-.navbar-nav .nav-link {
-  color: #cccccc !important;
-  margin-left: 1rem;
-  transition: color 0.3s;
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc107; /* boleh tukar warna line, contoh: kuning */
+  transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffffff !important;
+.navbar .nav-link:hover::after {
+  width: 100%;
 }
 
 /* =======================================
@@ -111,14 +115,43 @@ body {
 /* =======================================
    FOOTER
 ======================================= */
-.footer a {
+.footer-link {
+  position: relative;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
-.footer a:hover {
-  color: #ffffff;
+.footer-link:hover {
+  color: #ffc107;
+  transform: translateY(-2px);
 }
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #ffc107;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Social Icon Hover */
+.footer-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
 /* ===================== */
 /* ===== CONTACT CSS ==== */
 /* ===================== */
@@ -321,4 +354,33 @@ body {
 
 .episode-title .text-dark {
   font-size: 0.95rem;
+}
+.video-thumb {
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.video-thumb:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.video-thumb:hover .play-button {
+  opacity: 1;
+}
+
+.vlog-alternate-section {
+  background: linear-gradient(to bottom, #111, #000);
 }
