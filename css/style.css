@@ -10,6 +10,11 @@
   font-size: 1.5rem;
   color: #ffffff !important;
 }
+.navbar-brand span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
 
 .navbar-nav .nav-link {
   color: #cccccc !important;
@@ -175,4 +180,121 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
+}
+/* Tambah dalam css/style.css */
+
+.hero-section {
+  min-height: 50vh;
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+}
+
+.highlight-banner {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.brief-section h2 {
+  font-weight: bold;
+}
+
+.brief-section {
+  background-color: #f9f9f9;
+}
+/* Hover effect for banner */
+.card-style {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.card-style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.banner-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 2.0s ease forwards;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.episode-thumbnail {
+  overflow: hidden;
+  position: relative;
+}
+
+.episode-thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.episode-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.episode-thumbnail:hover .play-icon {
+  opacity: 1;
+}
+
+.episode-title .text-primary {
+  font-size: 1rem;
+}
+
+.episode-title .text-dark {
+  font-size: 0.95rem;
 }

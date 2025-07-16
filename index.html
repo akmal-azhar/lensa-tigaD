@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lensa 3D Website</title>
+  <title>Home | Lensa 3D Website</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="episodes.html">Episodes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#episodes">Article</a></li>
+          <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -46,62 +46,36 @@
     </div>
   </section>
 
+  <!-- Highlight Banner Section -->
+  <section class="highlight-banner py-4 animate-on-scroll fade-up">
+    <div class="container bg-warning rounded p-4 shadow banner-inner">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-3 mb-md-0">
+          <h4 class="fw-bold">Selamat Datang ke Lensa 3D!</h4>
+          <p class="mb-0">Laman perkongsian vlog gaya hidup, sukan, hiburan & banyak lagi 🎥</p>
+        </div>
+        <a href="episodes.html" class="btn btn-dark mt-3 mt-md-0">Lihat Episod</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brief Section -->
+  <section class="brief-section py-5 bg-light text-center fade-in">
+    <div class="container">
+      <h2 class="text-center fw-bold text-uppercase mb-4">Apa itu Lensa 3D<span class="text-primary">?</span></h2>
+      <p class="lead">
+        Lensa 3D ialah platform perkongsian video dan artikel yang menampilkan kehidupan seharian, 
+        aktiviti komuniti, serta hiburan tempatan. Kami membawa kisah menarik terus kepada anda, 
+        dari lensa kami ke skrin anda!
+      </p>
+    </div>
+  </section>
+
   <!-- Episodes Section -->
   <div id="episodes" class="container py-5">
-    <h2 class="text-center mb-4">🎥 My Vlog Episodes</h2>
+    <h2 class="text-center fw-bold text-uppercase mb-4">Latest Episodes<span class="text-primary">/</span></h2>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
-  <!-- Search Bar -->
-  <div class="input-group">
-    <span class="input-group-text"><i class="bi bi-search"></i></span>
-    <input type="text" id="searchInput" class="form-control" placeholder="Search episodes..." onkeyup="filterVlogs()">
-  </div>
-
-      <!-- Vlog Card 1 -->
-      <div class="col">
-        <div class="card vlog-card" onclick="openModal(
-          'Episode 1:',
-          'https://www.youtube.com/embed/2F2eUrucXFo',
-          'VLOG SFC Preseason 2025 | Dari Hari Pertama Sampai Friendly Pertama 🇹🇭'
-        )">
-          <img src="images/first.png" class="vlog-thumb" alt="Vlog 1">
-          <div class="card-body">
-            <h5 class="card-title">VLOG SFC Preseason 2025 | Dari Hari Pertama Sampai Friendly Pertama 🇹🇭</h5>
-            <p class="card-text">(Official Video)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vlog Card 2 -->
-      <div class="col">
-        <div class="card vlog-card" onclick="openModal(
-          'Episode 2:',
-          'https://www.youtube.com/embed/jkwRPbfvVVg',
-          ''
-        )">
-          <img src="images/second.png" class="vlog-thumb" alt="Vlog 2">
-          <div class="card-body">
-            <h5 class="card-title">[EPISOD PENUH] Sepahtu Reunion Live 2017 - Tragedi Buah Durian</h5>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vlog Card 3 -->
-      <div class="col">
-        <div class="card vlog-card" onclick="openModal(
-          'Episode 3:',
-          'https://www.youtube.com/embed/RJM1dtK5mj0',
-          'Preston North End 1-3 Liverpool | 2025 Club Friendly'
-        )">
-          <img src="images/third.png" class="vlog-thumb" alt="Vlog 3">
-          <div class="card-body">
-            <h5 class="card-title">Preston North End 1-3 Liverpool</h5>
-            <p class="card-text"> 2025 Club Friendly</p>
-          </div>
-        </div>
-      </div>
-
       <!-- Vlog Card 4 -->
       <div class="col">
         <div class="card vlog-card" onclick="openModal(
@@ -155,8 +129,8 @@
     <div class="container text-center">
       <div class="mb-3">
         <a href="index.html" class="text-light me-3">Home</a>
-        <a href="#episodes" class="text-light me-3">Episodes</a>
-        <a href="#episodes" class="text-light me-3">Article</a>
+        <a href="episodes.html" class="text-light me-3">Episodes</a>
+        <a href="article.html" class="text-light me-3">Article</a>
         <a href="about.html" class="text-light me-3">About</a>
         <a href="contact.html" class="text-light">Contact</a>
       </div>
@@ -194,5 +168,48 @@
 
   <!-- Optional Custom JS -->
   <script src="js/script.js"></script>
+  <!--Fade In-->
+  <script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show'); // supaya hilang balik bila keluar
+      }
+    });
+  }, options);
+
+  faders.forEach(fade => {
+    observer.observe(fade);
+  });
+  </script>
+
+  <!--Fade in Banner-->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const faders = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // 👈 hanya sekali
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    faders.forEach(el => observer.observe(el));
+  });
+  </script>
+
 </body>
 </html>

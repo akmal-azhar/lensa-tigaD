@@ -20,9 +20,16 @@ const episodes = [
     description: "Tempat menarik untuk dilawati di Kuala Lumpur.",
     videoUrl: "https://www.youtube.com/embed/somevideoid"
   },
-  // Tambah lagi ikut suka...
+  {
+    title: "Episode 4: Chelsea vs PSG",
+    category: "sukan",
+    image: "images/four.png",
+    description: "Chelsea vs PSG Club World Cup",
+    videoUrl: "https://www.youtube.com/embed/ON18ItHo5YE"
+  }
 ];
 
+// Paparkan kad video
 function renderEpisodes(data) {
   const container = document.getElementById("episodeContainer");
   container.innerHTML = "";
@@ -43,6 +50,7 @@ function renderEpisodes(data) {
   });
 }
 
+// Gabungan search + filter
 function filterEpisodes() {
   const search = document.getElementById("searchInput").value.toLowerCase();
   const filter = document.getElementById("filterCategory").value;
@@ -55,8 +63,9 @@ function filterEpisodes() {
   renderEpisodes(filtered);
 }
 
+// Event listener
 document.getElementById("searchInput").addEventListener("input", filterEpisodes);
 document.getElementById("filterCategory").addEventListener("change", filterEpisodes);
 
-// Initial render
+// Papar semua episod mula-mula
 renderEpisodes(episodes);
