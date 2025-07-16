@@ -167,3 +167,12 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.vlog-thumb {
+  width: 100%;
+  height: 200px;
+}
+.vlog-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}

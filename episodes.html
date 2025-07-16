@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Episodes | MyVlog</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar (sama macam index) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2">
+        <span> Lensa 3D</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="episodes.html">Episodes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#episodes">Article</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section d-flex align-items-center">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-dark">Vlog Episodes</h1>
+      <p class="lead text-dark">Browse all vlogs and filter by category 🎬</p>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <div class="container py-4">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search episodes...">
+      </div>
+      <div class="col-md-6 text-md-end mt-2 mt-md-0">
+        <select id="filterCategory" class="form-select w-auto d-inline-block">
+          <option value="all">All</option>
+          <option value="sukan">Sukan</option>
+          <option value="education">Education</option>
+          <option value="information">Information</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Episode Cards -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="episodeContainer">
+      <!-- Cards will go here -->
+    </div>
+  </div>
+
+  <!-- Footer (sama macam index) -->
+  <!-- Footer -->
+  <footer class="footer mt-5 bg-dark text-light py-4">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="index.html" class="text-light me-3">Home</a>
+        <a href="#episodes" class="text-light me-3">Episodes</a>
+        <a href="#episodes" class="text-light me-3">Article</a>
+        <a href="about.html" class="text-light me-3">About</a>
+        <a href="contact.html" class="text-light">Contact</a>
+      </div>
+      <div class="mb-3">
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-youtube"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-tiktok"></i></a>
+      </div>
+      <div>
+        <small>&copy; 2025 MyVlog. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/episodes.js"></script>
+</body>
+</html>
