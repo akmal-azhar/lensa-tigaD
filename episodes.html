@@ -59,19 +59,19 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      <!-- Episod 1 -->
-      <div class="col">
-        <div class="episode-thumbnail position-relative" onclick="goToEpisode('iKZyYdwS3Wg')">
-          <img src="images/first.png" alt="Episode 1" class="img-fluid w-100">
-          <div class="play-icon">
-            <i class="bi bi-play-circle-fill"></i>
-          </div>
-        </div>
-        <div class="episode-title mt-2">
-          <div class="text-primary fw-bold">#1001</div>
-          <div class="text-dark">Stranger Things</div>
-        </div>
-      </div>
+<div class="col">
+  <div class="episode-thumbnail position-relative" onclick="goToEpisode('iKZyYdwS3Wg')">
+    <img src="images/stranger.png" alt="Episode 1" class="img-fluid w-100">
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+  </div>
+  <div class="episode-title mt-2">
+    <div class="text-primary fw-bold">#1001</div>
+    <div class="text-dark">Stranger Things</div>
+  </div>
+</div>
+
 
       <!-- Episod 2 -->
       <div class="col">
@@ -195,5 +195,12 @@
 
   <!-- Optional Custom JS -->
   <script src="js/script.js"></script>
+
+  <script>
+  function goToEpisode(videoID) {
+    window.location.href = `episode-view.html?video=${videoID}`;
+  }
+  </script>
+
 </body>
 </html>

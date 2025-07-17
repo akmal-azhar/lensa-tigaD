@@ -51,6 +51,37 @@
     <!-- Video Description -->
     <p id="videoDesc" class="lead text-center mb-4"></p>
 
+    <!-- ========== COMMENT SECTION ========== -->
+    <div class="comment-section mb-5">
+      <h4 class="text-center mb-4">Comments</h4>
+
+      <!-- Comment Form -->
+      <div class="card p-4 mb-4 shadow-sm">
+        <form id="commentForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Name</label>
+            <input type="text" id="username" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="commentText" class="form-label">Your Comment</label>
+            <textarea id="commentText" class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Post Comment</button>
+        </form>
+      </div>
+
+      <!-- Comments Display -->
+      <div id="commentsContainer" class="px-2">
+        <!-- Example comment -->
+        <!--
+        <div class="mb-3 border-bottom pb-2">
+          <strong>John Doe</strong>
+          <p class="mb-1">This is a great video!</p>
+        </div>
+        -->
+      </div>
+    </div>
+
     <!-- ========== SOCIAL SHARE SECTION ========== -->
     <div class="text-center mb-5">
       <h5>Share this video:</h5>
@@ -147,5 +178,42 @@
     document.getElementById("videoDesc").textContent = desc;
   </script>
 
+  <script>
+    // Ambil video ID dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoID = urlParams.get("video");
+
+    // Jika video ID wujud, masukkan dalam iframe
+    if (videoID) {
+      document.getElementById("videoFrame").src = `https://www.youtube.com/embed/${videoID}?autoplay=1`;
+    } else {
+      document.getElementById("videoFrame").outerHTML = "<p>Video not found.</p>";
+    }
+  </script>
+
+  <script>
+    const commentForm = document.getElementById("commentForm");
+    const commentsContainer = document.getElementById("commentsContainer");
+
+    commentForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("username").value.trim();
+      const text = document.getElementById("commentText").value.trim();
+
+      if (name && text) {
+        const commentHTML = `
+          <div class="mb-3 border-bottom pb-2">
+            <strong>${name}</strong>
+            <p class="mb-1">${text}</p>
+          </div>
+        `;
+        commentsContainer.innerHTML += commentHTML;
+
+        // Clear form
+        commentForm.reset();
+      }
+    });
+  </script>
 </body>
 </html>
