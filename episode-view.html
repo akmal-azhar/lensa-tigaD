@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>View | Lensa 3D</title>
+  <title>View | Lensa TigaD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- ========== CSS SECTION ========== -->
   <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2">
+        <img src="images/logo.png" alt="Logo" width="100" height="60" class="me-2">
         <span>Lensa 3D</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-3">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="episodes.html">Episodes</a></li>
           <li class="nav-item"><a class="nav-link" href="article.html">Article</a></li>
@@ -35,17 +37,21 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
+  <!-- ========== MAIN CONTENT ========== -->
   <div class="container py-5">
+
+    <!-- Video Title -->
     <h1 id="videoTitle" class="video-title text-center mb-4"></h1>
 
+    <!-- Video Frame -->
     <div class="ratio ratio-16x9 mb-4 mx-auto" style="max-width: 800px;">
-    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
     </div>
 
+    <!-- Video Description -->
     <p id="videoDesc" class="lead text-center mb-4"></p>
 
-    <!-- Social Share -->
+    <!-- ========== SOCIAL SHARE SECTION ========== -->
     <div class="text-center mb-5">
       <h5>Share this video:</h5>
       <div class="social-icons">
@@ -55,10 +61,12 @@
       </div>
     </div>
 
-    <!-- Related Videos -->
+    <!-- ========== RELATED VIDEOS ========== -->
     <div class="related-videos mb-5">
       <h4 class="mb-4">Related Videos</h4>
       <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Related Video 1 -->
         <div class="col">
           <div class="card related-card">
             <img src="images/first.png" class="card-img-top" alt="Related 1">
@@ -68,6 +76,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Related Video 2 -->
         <div class="col">
           <div class="card related-card">
             <img src="images/four.png" class="card-img-top" alt="Related 2">
@@ -77,6 +87,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Related Video 3 -->
         <div class="col">
           <div class="card related-card">
             <img src="images/six.png" class="card-img-top" alt="Related 3">
@@ -86,35 +98,44 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
-  </div>
 
-      <!-- Footer -->
-    <footer class="footer mt-5 bg-dark text-light py-4 text-center">
+  </div> <!-- End of .container -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer mt-5 bg-black text-light py-4 text-center">
     <div class="container">
-        <div class="mb-3">
-        <a href="index.html" class="text-light me-3">Home</a>
-        <a href="episodes.html" class="text-light me-3">Episodes</a>
-        <a href="article.html" class="text-light me-3">Article</a>
-        <a href="about.html" class="text-light me-3">About</a>
-        <a href="contact.html" class="text-light">Contact</a>
-        </div>
-        <div class="mb-3">
-        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="text-light me-3"><i class="bi bi-youtube"></i></a>
-        <a href="#" class="text-light"><i class="bi bi-tiktok"></i></a>
-        </div>
-        <div>
-        <small>&copy; 2025 MyVlog. All rights reserved.</small>
-        </div>
-    </div>
-    </footer>
+      <!-- Footer Links -->
+      <div class="mb-3">
+        <a href="index.html" class="footer-link text-light mx-2">Home</a>
+        <a href="episodes.html" class="footer-link text-light mx-2">Episodes</a>
+        <a href="article.html" class="footer-link text-light mx-2">Article</a>
+        <a href="about.html" class="footer-link text-light mx-2">About</a>
+        <a href="contact.html" class="footer-link text-light mx-2">Contact</a>
+      </div>
 
-  <!-- Bootstrap JS -->
+      <!-- Social Media Icons -->
+      <div class="mb-3">
+        <a href="#" class="footer-icon text-light mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="footer-icon text-light mx-2"><i class="bi bi-youtube"></i></a>
+        <a href="#" class="footer-icon text-light mx-2"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+      <!-- Copyright -->
+      <div>
+        <small>&copy; 2025 Lensa 3D. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Video Loader -->
+  <!-- Load Video from URL Parameters -->
   <script>
     const params = new URLSearchParams(window.location.search);
     const title = decodeURIComponent(params.get("title"));
